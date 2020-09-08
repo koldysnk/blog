@@ -1,0 +1,39 @@
+#header{
+    text-align: center;
+    background-color:rgb(118, 150, 209);
+    font-size: 3em;
+    width: 100%;
+}
+#index-body{
+    background-color:rgb(142, 178, 243);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.block{
+    display: inline-block;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 4px rgb(139, 139, 139);
+    width: 30%;
+    max-width: 30%;
+    min-width: 300px;
+    box-sizing: border-box;
+    margin:5px;
+    vertical-align: top;
+}
+
+.block-p{
+    padding: 10px;
+    margin: 0;
+}
+.block-h1{
+    margin: 0;
+    text-align: center;
+}
+.link{
+    display: block;
+    text-align: center;
+    padding-bottom: 2px;
+}
