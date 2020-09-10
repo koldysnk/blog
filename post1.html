@@ -16,8 +16,80 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body id="index-body">
-    Page 2
+<body id="post-body">
+    <div class="post-block">
+        <h1 class="post-h1">Web Analytics</h1>
+        <h2 class="post-h2">What analytics?</h2>
+        <p class="post-p">
+            Web analytics are added to a website and are used to track information about the users that visit the
+            website and how they interact with the website. Oftentimes, a user will visit a website and not even realize
+            that an analytics script is recording information about the interaction. The type of information collected
+            can generally be split into two categories. First, information can be collected about what a user does while
+            visiting the website. Some examples of this first case include the total time spent on the site, the time
+            spent on each page, the order pages were visited, and which internal links were clicked. Second, information
+            can be collected about the user itself. Examples of the second case include collecting the geographic
+            location of the user, the IP-Address of the user, what browser or operating system their using, and the site
+            that referred them.
+        </p>
+        <h2 class="post-h2">Why analytics?</h2>
+        <p class="post-p">
+            As more and more people across the globe are gaining access to the internet, the opportunity for websites to
+            make a profit increases as well. Each new person with access is a new potential customer. Now, for websites,
+            customers can be anyone from someone who just visits a page and reads a blog post or someone who goes to an
+            online store and purchases a product. However, very few of these people would become customers without web
+            analytics. Since so many people have access to the internet, millions of websites have been created to fill
+            the demand and all of them are competing for customers. If a website isn’t appealing enough, potential
+            customers will browse right past it and visit a different site.
+        </p>
+        <p class="post-p">
+            This is where web analytics play a major role. By using analytics, a company can identify important data
+            about the users. I write data because most analytics tools do not interpret the data they collect into
+            information. The data would need to be collected and interpreted into usable information. If the number of
+            users is relatively low, analyzing the data may be able to be done by hand, but as the users grow analysts
+            will tend to rely on some sort of machine learning to interpret the data. Once the information is available,
+            it can be used to realize why people like the website and why people leave the website, among other things.
+            The company would then try to use this information to increase time spent and revisits while removing or
+            toning down aspects of the website that are less popular.
+        </p>
+        <h2 class="post-h2">How analytics?</h2>
+        <p class="post-p">
+            Adding analytics to a website may seem like an overwhelming task for a small developer, but depending on how
+            you add the feature, it could only take 15 minutes. One of the most common and easiest ways is to use Google
+            Analytics, plus its free. To use Google Analytics, first you must have or create a google account. Next, you
+            can create a google analytics account for free. The application process is short and only asks for
+            information about what you are tracking and what information you want to share. Once you have an analytics
+            account Google will provide you with a code insert resembling the one below. Put the insert inside the head
+            tag of each HTML file, upload your site, and you’re good to go!
+        </p>
+        <div class="div-code">
+            <pre class="post-pre-code">
+                <code class="post-code">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ID-1">&lt;/script>
+&lt;script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'YOUR_ID');
+&lt;/script>
+                </code>
+            </pre>
+        </div>
+        <h3 class="post-h3">Sources</h3>
+        <p class="post-p">For this post, I used an article from Professional Academy and Google Analytics. I also
+            watched a YouTube video from WP Smackdown to learn how to apply Google Analytics. 
+        </p>
+        <ul>
+            <li><a class="link-source" href="https://www.professionalacademy.com/blogs-and-advice/why-are-web-analytics-so-important-to-marketers-and-businesses-alike-">Professional Academy Article</a>
+            </li>
+            <li><a class="link-source" href="https://developers.google.com/analytics/devguides/collection/analyticsjs">Google Analytics Devguide</a>
+            </li>
+            <li><a class="link-source" href="https://youtu.be/mXcQ7rVn3ro">WP Smackdown Video</a>
+            </li>
+        </ul>
+        <a class="link" href="index.html">Home</a>
+    </div>
 </body>
 
 </html>
