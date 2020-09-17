@@ -18,23 +18,48 @@
 
 <body id="post-body">
     <div class="post-block">
-        <h1 class="post-h1">Micro Frontend</h1>
-        <h2 class="post-h2">What micro frontend?</h2>
+        <h1 class="post-h1">Micro Frontends</h1>
+        <h2 class="post-h2">What?</h2>
         <p class="post-p">
-            Micro frontends take the idea of microservices and apply it to frontend web development. This is done by taking a frontend that contains multiple functions and breaking it up into modularized single function sections. The goal is to keep each section well defined and allowing for abstraction and a more agile development process. Before applying microservices to web development the site is often called a monolith. A steppingstone architecture between monoliths and micro frontends is the frontend-backend architecture. The frontend-backend architecture was a very popular architecture over the past couple of years, but now companies are trending towards micro frontends. 
+            Micro frontends take the idea of microservices and apply it to frontend web development. This is done by
+            taking a frontend that contains multiple functions and breaking it up into modularized single function
+            sections. The goal is to keep each section well defined and allowing for abstraction and a more agile
+            development process. Before applying microservices to web development the site is often called a monolith. A
+            steppingstone architecture between monoliths and micro frontends is the frontend-backend architecture. The
+            frontend-backend architecture was a very popular architecture over the past couple of years, but now
+            companies are trending towards micro frontends.
         </p>
-        <h2 class="post-h2">Why micro frontend?</h2>
+        <h2 class="post-h2">Why?</h2>
         <p class="post-p">
-            The goal of any programmer or developer is to make their program as fast as possible an as reliable as possible. Micro frontends can help web developers achieve this goal. By having each feature of the website modularized, the code that creates the site is much easier to understand. The separation of features also means that any bugs or errors in the system will be much easier to isolate and as a result easier to debug. Implementing micro frontends will also allow multiple developers to work on different features simultaneously without affecting the others. In a monolith, working on multiple features at once could become overwhelming and one developers work could affect another’s. Furthermore, with bigger code bases rollouts would need to be all encompassing and the producer would need to make sure all features are working during each update and ensure that any features from the previous update do not have unexpected conflicts with newer features. When using micro frontends, rollouts could be based solely on the features and since the features would not interact with each other and are abstracted, there would be no potential conflict between new and old features. The last reason to implement micro frontends is to make full system failures much harder to cause or occur. If one feature stops working, whether its due to server downtime or any other reason, it will not cause the other systems to fail. 
+            The goal of any programmer or developer is to make their program as fast as possible an as reliable as
+            possible. Micro frontends can help web developers achieve this goal. By having each feature of the website
+            modularized, the code that creates the site is much easier to understand. The separation of features also
+            means that any bugs or errors in the system will be much easier to isolate and as a result easier to debug.
+            Implementing micro frontends will also allow multiple developers to work on different features
+            simultaneously without affecting the others. In a monolith, working on multiple features at once could
+            become overwhelming and one developers work could affect another’s. Furthermore, with bigger code bases
+            rollouts would need to be all encompassing and the producer would need to make sure all features are working
+            during each update and ensure that any features from the previous update do not have unexpected conflicts
+            with newer features. When using micro frontends, rollouts could be based solely on the features and since
+            the features would not interact with each other and are abstracted, there would be no potential conflict
+            between new and old features. The last reason to implement micro frontends is to make full system failures
+            much harder to cause or occur. If one feature stops working, whether its due to server downtime or any other
+            reason, it will not cause the other systems to fail.
         </p>
-        <h2 class="post-h2">How micro frontend?</h2>
+        <h2 class="post-h2">How?</h2>
         <p class="post-p">
-            The easiest way to implement a micro frontend is by adding custom HTML tags, which is usually done in JavaScript. First you need to create a class that extends an HTMLElement. The class needs to contain a connectedCallback function. This function is called every time your new html tag is reached. In the innerHTML attribute you would write all of the HTML code that would belong in the tag. The disconnectedCallback function gives the old element a chance to clean up any listeners or other attached attributes. After creating the class you must officially link it to the custom element. When naming the element make sure to include a dash (-) character in the name. This is important to ensure that any of your custom elements are compatible with future HTML elements. 
+            The easiest way to implement a micro frontend is by adding custom HTML tags, which is usually done in
+            JavaScript. First you need to create a class that extends an HTMLElement. The class needs to contain a
+            connectedCallback function. This function is called every time your new html tag is reached. In the
+            innerHTML attribute you would write all of the HTML code that would belong in the tag. The
+            disconnectedCallback function gives the old element a chance to clean up any listeners or other attached
+            attributes. After creating the class you must officially link it to the custom element. When naming the
+            element make sure to include a dash (-) character in the name. This is important to ensure that any of your
+            custom elements are compatible with future HTML elements.
         </p>
         <div class="div-code">
             <pre class="post-pre-code">
                 <code class="post-code">
-<!-- Global site tag (gtag.js) - Google Analytics -->
   class NewElement extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `&lt;button type="button">This is the new element.&lt;/button>`;
@@ -47,7 +72,8 @@
             </pre>
         </div>
         <h3 class="post-h3">Sources</h3>
-        <p class="post-p">For this post, I used two articles about micro frontends. One of these articles is from Michael Geers and the other is from SMARTBEAR. 
+        <p class="post-p">For this post, I used two articles about micro frontends. One of these articles is from
+            Michael Geers and the other is from SMARTBEAR.
         </p>
         <ul>
             <li><a class="link-source" href="https://micro-frontends.org/">Michael Geers Article</a>
