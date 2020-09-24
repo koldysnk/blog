@@ -1,0 +1,100 @@
+<!-- Auto format hotkey: Shift Alt F -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 347</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177778286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177778286-1');
+    </script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="post-body">
+    <div class="post-block">
+        <h1 class="post-h1">Web Transactions</h1>
+        <h2 class="post-h2">What?</h2>
+        <p class="post-p">
+            Web transactions are probably one of the most common ways businesses can make money online. As a customer
+            making web transactions seem very simple and easy. To the user, they appear as a simple form in which one
+            would fill out their credit card information and billing address. Sometimes if the transaction includes a
+            delivery of a physical product there may be a second form for the customer’s delivery address. However, web
+            transactions are much more than just two forms below the surface. A web transaction using the third-party
+            merchant Google Pay exhibits the following structure. First, the user would click the Google Pay button
+            which would display a list of supported payment methods. It will also display any of the payment methods
+            currently saved with the customer’s google account. All of the payment information is stored on Google’s
+            server side, so when the user confirms a payment a token is sent back to the website. The token includes all
+            the necessary information to complete the payment. The website would then send the token and the details
+            about the purchase to its backend. The backend then sends the token to the payment provider and uses the
+            purchase details to perform any logistical actions needed to ensure the customer will receive their product.
+        </p>
+        <h2 class="post-h2">Why?</h2>
+        <p class="post-p">
+            To make money of course! While web transactions are not the only way to make money through your website, it
+            is the most obvious especially if you are selling a product. Two other methods include hosting
+            advertisements and selling data. However, both of these other methods require a lot of traffic and won’t
+            help you if you are trying to sell a product. Web transactions can also help a business owner increase their
+            customer count drastically. For example, if you are a local artist and sell art out of your garage then your
+            customers are limited by your location. This means only people who live near you would have a chance of
+            learning about your business and potentially buying a piece of art. But as soon as you make a website,
+            people from all over the world can learn about your business. However, without some sort of web
+            transactions, they still will not be able to buy your products easily. As soon as you add web transactions,
+            location no longer matters and people from all over the world can buy your art.
+        </p>
+        <h2 class="post-h2">How?</h2>
+        <p class="post-p">
+            There are two main ways of implementing web transactions. First, is through your own merchant account. To
+            use this method, you would need to get an approved merchant account from a bank and then build the
+            transaction forms from scratch. If you are a small business this option may be too costly as the initial
+            setup fees for a merchant account can be high and maintaining the transaction forms may be too time
+            consuming. The more popular way is to use a third-party merchant. This option is usually better since the
+            setup fees are low to none and most third-party merchants will provide an API. The downside to using a
+            third-party merchant is that they will almost always take a small fee from each purchase made.
+        </p>
+        <p class="post-p">
+            For my example I will be referencing the third-party merchant Google Pay. When integrating the functionality
+            for the Google Pay API, there are four main steps to follow. First, you must load the JavaScript file that
+            allows all the functionality to work (pay.js). Once the file is loaded you must add functionality for the
+            isPaymentReady() API call. This function checks to see if the person viewing your page has a valid payment
+            method. One thing to note here is that Google suggests not to display the Google Pay button until a valid
+            payment method is confirmed. This means the person browsing your site must have an active google account
+            already signed in. Once a valid payment method is confirmed the second API call to make is the
+            createButton() function. This ensures that all regulations are being met and even provides translations
+            based on the user’s location. The final API call is the loadPaymentData() call which opens up the payment
+            sheet and performs all the necessary tasks for collecting the payment token details. Once these steps are
+            done your web transactions are ready for business. The code excerpt bellow only shows the first step, but a
+            link is provided to the rest of the steps.
+        </p>
+        <div class="div-code">
+            <pre class="post-pre-code">
+                <code class="post-code">
+&lt;script
+  async
+  src="https://pay.google.com/gp/p/js/pay.js"
+  onload="console.log('TODO: add onload function')">
+&lt;/script>
+                </code>
+            </pre>
+        </div>
+        <h3 class="post-h3">Sources</h3>
+        <p class="post-p">For this post, I just used the Google Pay documentation.
+        </p>
+        <ul>
+            <li><a class="link-source" href="https://developers.google.com/pay/api/web/overview">Google Pay Overview</a>
+            </li>
+            <li><a class="link-source" href="https://developers.google.com/pay/api/web/guides/tutorial">Integration
+                    Tutorial</a>
+            </li>
+        </ul>
+        <a class="link" href="index.html">Home</a>
+    </div>
+</body>
+
+</html>
