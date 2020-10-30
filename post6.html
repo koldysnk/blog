@@ -1,0 +1,95 @@
+<!-- Auto format hotkey: Shift Alt F -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 347</title>
+    <script data-ad-client="ca-pub-8984530254002670" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177778286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177778286-1');
+    </script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="post-body">
+    <div class="post-block">
+        <h1 class="post-h1">User Accounts</h1>
+        <h2 class="post-h2">What?</h2>
+        <p class="post-p">
+            User accounts are basically a grouping of information tied to a particular person or entity. Most times
+            accounts are also specific to a particular online activity. Their usage ranges greatly and almost always
+            depends on the site or service the account is with. For example, a bank might have a website and a customer
+            at the bank could have an account on the website. This type of account might have the ability to view
+            information about that person’s finances, allow them to make payments, or sign up for a credit card. That
+            same person might also have an account with Instagram which allows them to make posts or interact with other
+            posts. However, these two accounts are not related to each other except by the user. But it does not matter
+            what the account is for it will still serve as a secure link to that user’s associated information. That
+            leads us to the most important part about user accounts: security. These accounts must be secure especially
+            if they contain private information. On the users end they are often secured by a password which is created
+            by the user and not given to anyone else. However, most account management systems hash the password.
+        </p>
+        <h2 class="post-h2">Why?</h2>
+        <p class="post-p">
+            As people’s identities are becoming more related to their internet activity, user accounts have emerged as a
+            necessity especially if your site requires private or sensitive information to function. Even if your site
+            does not include private information including accounts could provide an added amenity to the site. For
+            example, if you are making a website that hosts free small minigames user accounts are not necessary. But
+            allowing the users to sign in and keep track of their high score and receive virtual rewards provides the
+            user with a source of competition and will encourage them to come back to the site.
+        </p>
+        <h2 class="post-h2">How?</h2>
+        <p class="post-p">
+            When adding user accounts to your site there are two things you need to get started. First, you will need
+            some sort of database. Second, you will need a way to access the database from your site. When creating
+            accounts, you can choose to let the user create their own username/id or create one for them. But either way
+            usernames should be unique so it can be used as a primary key. The user should also create a password which
+            will be hashed, and the hashed version is what should be saved in the database. This is the minimum you need
+            for the database, but you should include any other information related to the site.
+        </p>
+        <p class="post-p">
+            The code below is my example of making a JavaScript fetch call to log in. The code will send the username (primary key)
+            and password to the login endpoint in the app.js file. The login endpoint will check if the hashed password
+            corresponds with the username and return the information associated with the account in the form of the
+            object if the password is correct. If not, then the endpoint will return false.
+        </p>
+        <div class="div-code">
+            <pre class="post-pre-code">
+                <code class="post-code">
+function login() {
+    fetch(`https://example.com/login/${username}/${password}`)
+        .then(response => response.json())
+        .then(data => {
+            if(data==false){
+                alert("Incorrect password");
+            }else{
+                userInfo=data;
+            }
+        });
+};
+                </code>
+            </pre>
+        </div>
+        <h3 class="post-h3">Sources</h3>
+        <p class="post-p">For this post, I just used a envantoplus article.
+        </p>
+        <ul>
+            <li><a class="link-source" href="https://code.tutsplus.com/articles/how-to-build-a-login-system-for-a-simple-website--net-2853">
+                    How to Build a Login System</a>
+            </li>
+        </ul>
+        <a class="link" href="index.html">Home</a>
+    </div>
+
+
+
+</body>
+
+</html>
