@@ -1,0 +1,83 @@
+<!-- Auto format hotkey: Shift Alt F -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 347</title>
+    <script data-ad-client="ca-pub-8984530254002670" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177778286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177778286-1');
+    </script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="post-body">
+    <div class="post-block">
+        <h1 class="post-h1">Regular Expressions</h1>
+        <h2 class="post-h2">What and Why?</h2>
+        <p class="post-p">
+            Regular expressions are also known as regexes. They are string representations of patterns that are used to
+            identify other strings/patterns. They can be used to check whole strings or characters for matches. In
+            almost every situation where regular expressions are used they are used to eliminate the need for multiple
+            searches. For example, one of the simplest uses for regular expressions are when a word has multiple
+            spellings. If you wanted to perform a search for the word gray/grey without regular expressions you would
+            first need to do a search for gray then a search for grey and combine the results. When using regular
+            expressions, you only need one search on the regex /gr[ae]y/. This is assuming the regex delimiters are the
+            '/' character. Aside from just alphabetic characters, regular expressions can also include numbers and
+            symbols. Using regular expressions could be particularly useful during project two as they will help me
+            identify words that match letters that have already been guessed.
+        </p>
+        <h2 class="post-h2">How?</h2>
+        <p class="post-p">
+            If the regular expression is relatively simple it will look very similar to the string you are looking for.
+            However as your target becomes more complicated so will the regular expression. If you want a range in your
+            expression you can use the '-' character to indicate one. The regex /[1-9]/ represents a single digit.
+            Notice how this regex includes brackets. The brackets indicate that 1-9 part is a range. Now what happens if
+            you would like more than one digit. Instead of multiple ranges you could add a quantifier. First is the ‘*’
+            character which matches any quantity from zero and above. Next is the '+' character which matches any
+            quantity from one and above. Last is the '?' character which matches one or none. Quantifiers can be more
+            specific with the braces '{}' character. The regex /[0-9]{3}/ matches a three digit number, /[0-9]{3,5}/
+            matches a three to five digit number, and /[0-9]{3,}/ matches a three digit or longer number.
+        </p>
+        <p class="post-p">
+            The following example of regular expressions is using JavaScript. The example takes a string which contains
+            any number of words delimited by numbers with any digit length above one. It then splits that string into an
+            array of strings where each index is a word.
+        </p>
+        <div class="div-code">
+            <pre class="post-pre-code">
+                <code class="post-code">
+let sentence = 'The1quick64835brown78545523258545fox682jumped0over7342the7lazy46dog';
+let words = sentence.split(/[0-9]+/);
+                </code>
+            </pre>
+        </div>
+        <h3 class="post-h3">Sources</h3>
+        <p class="post-p">For this post, I just used a w3schools article and a regex cheat sheet.
+        </p>
+        <ul>
+            <li><a class="link-source"
+                    href="https://www.w3schools.com/js/js_regexp.asp">
+                    w3schools Article</a>
+            </li>
+            <li><a class="link-source"
+                    href="https://www.rexegg.com/regex-quickstart.html">
+                    RegEx Cheat Sheet</a>
+            </li>
+        </ul>
+        <a class="link" href="index.html">Home</a>
+    </div>
+
+
+
+</body>
+
+</html>
