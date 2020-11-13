@@ -1,0 +1,118 @@
+<!-- Auto format hotkey: Shift Alt F -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS 347</title>
+    <script data-ad-client="ca-pub-8984530254002670" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177778286-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177778286-1');
+    </script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="post-body">
+    <div class="post-block">
+        <h1 class="post-h1">CAPTCHAs</h1>
+        <h2 class="post-h2">What?</h2>
+        <p class="post-p">
+            CAPTCHAs are a type of form element that requests the user perform some type of action. The action can range
+            from many different things, but the most common ones ask you to type a specific word that is displayed with
+            some type of non-uniform/non-standard style. Another common CAPTCHA asks the user to select images from a
+            list of provided images that all contain a certain object. Ideally the action a CAPTCHA asks the user to
+            perform would be relatively easy for a human but very difficult for a bot. CAPTCHAs should also provide
+            support for users with hearing or seeing disabilities. CAPTCHAs have been around for over 20 years and the
+            acronym CAPTCHA stands for Completely Automated Public Turing test to tell Computers and Humans Apart.
+        </p>
+        <h2 class="post-h2">Why?</h2>
+        <p class="post-p">
+            In the 1990s Altavista was the most commonly used search engine and supported logging websites and their
+            links in its database. However, spam became a major problem as there were many people who created bots that
+            sent links to Altavista’s database. To overcome this problem, Altavista created the first CAPTCHA which was
+            an image of a set of letters and numbers that was distorted. To submit a link to the database one would need
+            to correctly identify the set of letters and numbers. Since image recognition was not as good back then,
+            this eliminated the threat of bots posting links. Nowadays, CAPTCHAs are very common and are used wherever a
+            public form is recorded that is also not behind some other sort of verification wall like an account login.
+            They are used to prevent spam and potentially malicious inputs.
+        </p>
+        <h2 class="post-h2">How?</h2>
+        <p class="post-p">
+            You could always try and create your own version of a CAPTCHA, but this could be very difficult, unreliable,
+            and potentially vulnerable. I would suggest using the reCAPTCHA script provided by Google for free. To use
+            tis you first need to register for your key. This includes providing information about your domain and what
+            type of CAPTCHA you would like. The public and private keys are provided instantly, and the public key
+            should be used in place of publicKey in the code sample. The private key is to be used on your server side
+            to verify the CAPTCHA was completed correctly. When implementing the CAPTCHA on your client side there are
+            only three code steps needed.
+        </p>
+        <br>
+        <p class="post-p">
+            First, you must load in the script.
+        </p>
+        <div class="div-code">
+            <pre class="post-pre-code">
+                <code class="post-code">
+&lt;script src="https://www.google.com/recaptcha/api.js">&lt;/script>
+                </code>
+            </pre>
+        </div>
+        <p class="post-p">
+            Second, you must have a callback function that handles the token received when the CAPTCHA is completed
+            correctly.
+        </p>
+        <div class="div-code">
+            <pre class="post-pre-code">
+                <code class="post-code">
+&lt;script>
+    function onSubmit(token) {
+      document.getElementById("demo-form").submit();
+    }
+&lt;/script>
+                </code>
+            </pre>
+        </div>
+        <p class="post-p">
+            Finally, you must include specific tags on your submit button for whatever form you would like to apply the
+            CAPTCHA to.
+        </p>
+        <div class="div-code">
+            <pre class="post-pre-code">
+                <code class="post-code">
+&lt;button class="g-recaptcha" 
+    data-sitekey="publicKey" 
+    data-callback='onSubmit' 
+    data-action='submit'>Submit&lt;/button>
+                </code>
+            </pre>
+        </div>
+        <h3 class="post-h3">Sources</h3>
+        <p class="post-p">For this post, I used a Hex Productions article, an internet.com article, and the Google
+            documentation for adding a CAPTCHA to your site.
+        </p>
+        <ul>
+            <li><a class="link-source" href="https://www.horlix.com/captcha-a-brief-history/#:~:text=The%20Completely%20Automated%20Public%20Turing,for%20more%20than%2020%20years.">
+                    Hex Productions</a>
+            </li>
+            <li><a class="link-source" href="https://internet.com/website-building/how-to-add-a-captcha-to-your-website/">
+                    internet.com</a>
+            </li>
+            <li><a class="link-source" href="https://developers.google.com/recaptcha/docs/v3">
+                    Google Documentation</a>
+            </li>
+        </ul>
+        <a class="link" href="index.html">Home</a>
+    </div>
+
+
+
+</body>
+
+</html>
